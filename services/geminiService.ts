@@ -2,9 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import { INITIAL_PRODUCTS } from '../constants';
 
 const getAiClient = () => {
-  // In a real app, strict error handling for missing key
-  const apiKey = process.env.API_KEY || '';
-  return new GoogleGenAI({ apiKey });
+  return new GoogleGenAI({ apiKey: process.env.API_KEY });
 };
 
 export const getStylingAdvice = async (userQuery: string, currentContext?: string) => {

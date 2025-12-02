@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
+  const CustomNavLink = ({ to, children }: React.PropsWithChildren<{ to: string }>) => {
     const isActive = location.pathname === to;
     return (
       <Link
@@ -46,11 +46,11 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-8">
-            <NavLink to="/">HOME</NavLink>
-            <NavLink to="/shop">SHOP</NavLink>
-            <NavLink to="/about">ABOUT</NavLink>
-            <NavLink to="/contact">CONTACT</NavLink>
-            {isAdmin && <NavLink to="/admin">ADMIN</NavLink>}
+            <CustomNavLink to="/">HOME</CustomNavLink>
+            <CustomNavLink to="/shop">SHOP</CustomNavLink>
+            <CustomNavLink to="/about">ABOUT</CustomNavLink>
+            <CustomNavLink to="/contact">CONTACT</CustomNavLink>
+            {isAdmin && <CustomNavLink to="/admin">ADMIN</CustomNavLink>}
           </div>
 
           {/* Icons */}
@@ -85,10 +85,10 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-16 left-0 w-full bg-black border-b border-gray-800 p-4 flex flex-col space-y-4 shadow-2xl">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/shop">Shop</NavLink>
-            <NavLink to="/about">About Brand</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <CustomNavLink to="/">Home</CustomNavLink>
+            <CustomNavLink to="/shop">Shop</CustomNavLink>
+            <CustomNavLink to="/about">About Brand</CustomNavLink>
+            <CustomNavLink to="/contact">Contact</CustomNavLink>
             <button 
               onClick={() => { setIsAiModalOpen(true); setIsMobileMenuOpen(false); }}
               className="flex items-center gap-2 text-brand-gold font-bold"
