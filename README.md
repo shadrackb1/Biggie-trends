@@ -1,10 +1,8 @@
-﻿# Biggie trends
+# Biggie Trends
 
-Biggie Trends | Streetwear Redefined
+<img src="./assets/header.svg" width="100%" alt="Biggie Trends" />
 
-## Stack
-
-react Â· vite Â· typescript Â· node
+Streetwear redefined.
 
 ## Run locally
 
@@ -13,4 +11,4 @@ react Â· vite Â· typescript Â· node
 
 ## License
 
-Private / all rights reserved.
+All rights reserved.
