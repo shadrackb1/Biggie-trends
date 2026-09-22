@@ -1,8 +1,12 @@
 # Biggie Trends
 
-<img src="./assets/header.svg" width="100%" alt="Biggie Trends" />
+Streetwear brand site.
 
-Streetwear redefined.
+**Status:** brand site
+
+## Stack
+
+React, TypeScript, Vite
 
 ## Run locally
 
